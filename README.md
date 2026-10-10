@@ -17,7 +17,7 @@ Static site (plain HTML/CSS/JS, no build step). Deploys as-is on Vercel.
 
 - **Hours / phone / address:** search `index.html` for `8AM`, `989`, or `Bay St` (also in the JSON-LD block in `<head>`).
 - **Gallery photos:** put real job photos in `assets/img/work/` and list them in the `GALLERY` object at the top of `assets/js/site.js`. Until a category has real photos it shows studio renders labelled "Render" (Auto, Home) or a text panel (Boats & Powersports). Real photos replace the renders automatically.
-- **Colors:** `:root` tokens at the top of `site.css`. The lime accent is `--volt`.
+- **Colors:** `:root` tokens at the top of `site.css`. The red accent is `--signal` (`--signal-btn` for button fills, `--signal-text` for red text on dark).
 
 ## Launch checklist (moving to the business's own domain)
 
