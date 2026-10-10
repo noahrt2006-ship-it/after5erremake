@@ -21,34 +21,15 @@
   var hero = $('#hero');
 
   /* -------------------------------------------------------------------
-     GALLERY — real After Five Tint job photos.
+     GALLERY — real After Five Tint photos only.
      To add one: put the image in assets/img/work/ and add a line, e.g.
-       { src: 'assets/img/work/ceramic-civic.webp', alt: 'Black Civic with ceramic tint on the rear windows', caption: 'Ceramic film · Rear windows' },
-     under the right category. As soon as a category has real photos, they
-     replace the illustrative renders for that category automatically.
+       { src: 'assets/img/work/ceramic-civic.webp', alt: 'Black Civic with ceramic tint on the rear windows', caption: 'Ceramic, rear windows' },
+     under the right category. Empty categories show a holding panel.
      ------------------------------------------------------------------- */
   var GALLERY = {
     auto: [],
     home: [],
     power: []
-  };
-  // Studio renders of a concept car / interior. Never presented as customer work.
-  var ILLUSTRATIVE = {
-    auto: [
-      { src: 'assets/img/gallery/render-front.webp', alt: 'Low front three-quarter view of a graphite concept car in a dark studio', caption: 'Graphite, low and dark', size: 'xl' },
-      { src: 'assets/img/gallery/render-rear.webp', alt: 'Rear three-quarter view of the concept car with tinted rear glass', caption: 'Rear glass, deep tint', size: 'tall' },
-      { src: 'assets/img/compare-dark.webp', alt: 'Side view of the concept car with dark-looking side windows', caption: 'Side glass, darker look', size: 'wide' },
-      { src: 'assets/img/film-window.webp', alt: 'Close-up of a tinted driver window and mirror', caption: 'Driver window detail', size: 'sq' },
-      { src: 'assets/img/svc-detail.webp', alt: 'Close-up of a detailed black wheel and tyre', caption: 'Wheel detail', size: 'sq' }
-    ],
-    home: [
-      { src: 'assets/img/home-interior-wide.webp', alt: 'Sunlit living room with a glass wall overlooking the bay; left panes clear, right panes tinted', caption: 'Clear vs. tinted glass', size: 'xl' }
-    ],
-    power: []
-  };
-  var NOTES = {
-    real: '',
-    illustrative: 'Shown here: studio renders that illustrate the finish, not customer vehicles or homes. Ask us for photos of real installs.'
   };
   var CAT_NAMES = { auto: 'Auto', home: 'Home', power: 'Boats & Powersports' };
 
@@ -277,25 +258,25 @@
      GALLERY + LIGHTBOX
      =================================================================== */
   var grid = $('#workGrid');
-  var typePanel = $('#workType');
-  var note = $('#workNote');
+  var empty = $('#workEmpty');
+  var emptyCat = $('#workEmptyCat');
   var chips = $$('.work__filters .chip');
   var lightbox = $('#lightbox');
-  var current = { cat: 'auto', i: 0, items: [] };
+  var current = { cat: 'auto', i: 0 };
 
   function renderGallery(cat) {
     current.cat = cat;
-    var real = GALLERY[cat] || [];
-    var items = real.length ? real : (ILLUSTRATIVE[cat] || []);
-    current.items = items;
+    var items = GALLERY[cat] || [];
     grid.innerHTML = '';
-    typePanel.hidden = items.length > 0;
-    note.textContent = real.length ? NOTES.real : (items.length ? NOTES.illustrative : '');
-    note.hidden = !note.textContent;
-    grid.setAttribute('data-count', String(items.length));
+    if (!items.length) {
+      empty.hidden = false;
+      emptyCat.textContent = CAT_NAMES[cat];
+      return;
+    }
+    empty.hidden = true;
     items.forEach(function (it, i) {
       var fig = document.createElement('figure');
-      fig.className = 'work__item' + (it.size ? ' work__item--' + it.size : '');
+      fig.className = 'work__item';
       var b = document.createElement('button');
       b.type = 'button';
       b.setAttribute('aria-label', 'View larger: ' + it.alt);
@@ -304,16 +285,12 @@
       b.appendChild(img);
       b.addEventListener('click', function () { openLightbox(i); });
       fig.appendChild(b);
-      var c = document.createElement('figcaption');
-      c.innerHTML = '<span class="work__idx">' + String(i + 1).padStart(2, '0') + '</span>';
-      c.appendChild(document.createTextNode(it.caption || ''));
-      if (!real.length) { var t = document.createElement('em'); t.textContent = 'Render'; c.appendChild(t); }
-      fig.appendChild(c);
+      if (it.caption) { var c = document.createElement('figcaption'); c.textContent = it.caption; fig.appendChild(c); }
       grid.appendChild(fig);
     });
   }
   function showLightbox(i) {
-    var items = current.items;
+    var items = GALLERY[current.cat];
     current.i = (i + items.length) % items.length;
     var it = items[current.i];
     $('#lightboxImg').src = it.src;
