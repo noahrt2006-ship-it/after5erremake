@@ -174,9 +174,9 @@
       <div class="intro__cue">
         <span class="intro__cue-text" aria-hidden="true">SCROLL TO ENTER <span class="arr arr--down">↓</span></span>
         <span class="intro__progress" aria-hidden="true"><span id="introBar"></span></span>
-        <button class="intro__skip" id="introSkip" type="button">Skip intro</button>
       </div>
     </div>
+    <button class="intro__skip" id="introSkip" type="button">Skip intro <span aria-hidden="true">↓</span></button>
   </div>
 </section>
 
@@ -223,26 +223,26 @@
   <div class="wrap">
     <div class="services__head">
       <p class="label"><span>02</span> Our Services</p>
-      <h2 class="display" id="services-title">Tint. Wraps.<br>Detailing.</h2>
+      <h2 class="display" id="services-title">Tint. Wraps.<br>Detailing. Glass.</h2>
       <p class="intro-text">For your vehicle, your home, or your business. Pricing depends on the film or material you choose and the size of the job, so every quote is built around your project, not pulled from a flat menu.</p>
     </div>
 
     <!-- Automotive film selector -->
     <div class="film" id="film">
       <div class="film__intro">
-        <p class="label label--small">Automotive window tint</p>
+        <p class="family__tag"><span>A</span> Window tint · Automotive</p>
         <h3 class="film__title">Choose your film.</h3>
       </div>
 
       <div class="film__tabs" role="tablist" aria-label="Automotive film options">
         <button class="film__tab" role="tab" id="tab-standard" aria-controls="panel-standard" aria-selected="true">
-          <span class="film__tab-num">A</span><span class="film__tab-name">Standard</span>
+          <span class="film__tab-num">1</span><span class="film__tab-name">Standard</span>
         </button>
         <button class="film__tab" role="tab" id="tab-ceramic" aria-controls="panel-ceramic" aria-selected="false" tabindex="-1">
-          <span class="film__tab-num">B</span><span class="film__tab-name">Ceramic</span><span class="film__tag">Most popular</span>
+          <span class="film__tab-num">2</span><span class="film__tab-name">Ceramic</span><span class="film__tag">Most popular</span>
         </button>
         <button class="film__tab" role="tab" id="tab-premium" aria-controls="panel-premium" aria-selected="false" tabindex="-1">
-          <span class="film__tab-num">C</span><span class="film__tab-name">Premium / Color-stable</span>
+          <span class="film__tab-num">3</span><span class="film__tab-name">Premium / Color-stable</span>
         </button>
       </div>
 
@@ -257,7 +257,7 @@
 
         <div class="film__panels">
           <div class="film__panel" role="tabpanel" id="panel-standard" aria-labelledby="tab-standard" tabindex="0">
-            <p class="film__kicker">A — The everyday choice</p>
+            <p class="film__kicker">A.1 — The everyday choice</p>
             <h4>Standard film</h4>
             <p>Solid everyday UV and heat protection at the most accessible price point. A clean, factory-style finish that cuts glare without changing how your vehicle looks.</p>
             <ul class="ticks">
@@ -268,7 +268,7 @@
             <a class="btn btn--signal" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20standard%20window%20tint.%20My%20vehicle%20is%3A%20">Quote standard film <span class="arr" aria-hidden="true">↗</span></a>
           </div>
           <div class="film__panel" role="tabpanel" id="panel-ceramic" aria-labelledby="tab-ceramic" tabindex="0" hidden>
-            <p class="film__kicker">B — The popular upgrade</p>
+            <p class="film__kicker">A.2 — The popular upgrade</p>
             <h4>Ceramic film</h4>
             <p>Better heat rejection and clarity than standard film, with no signal interference for your radio, GPS, or phone. It's our most popular upgrade for daily drivers.</p>
             <ul class="ticks">
@@ -279,7 +279,7 @@
             <a class="btn btn--signal" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20ceramic%20window%20tint.%20My%20vehicle%20is%3A%20">Quote ceramic film <span class="arr" aria-hidden="true">↗</span></a>
           </div>
           <div class="film__panel" role="tabpanel" id="panel-premium" aria-labelledby="tab-premium" tabindex="0" hidden>
-            <p class="film__kicker">C — The long game</p>
+            <p class="film__kicker">A.3 — The long game</p>
             <h4>Premium / color-stable film</h4>
             <p>Top-tier heat rejection and long-term color stability, engineered to resist fading and purpling so it still looks sharp years down the road.</p>
             <ul class="ticks">
@@ -312,70 +312,91 @@
       </div>
     </div>
 
-    <!-- The rest of the line-up -->
-    <div class="lineup">
-      <div class="lineup__group">
-        <p class="lineup__cat">Glass</p>
-        <article class="svc" id="svc-home">
-          <span class="svc__num">01</span>
-          <h3 class="svc__name">Home window glass</h3>
-          <p class="svc__desc">Cut glare and heat in your living space, and protect furniture, flooring, and artwork from UV fade, without losing natural light or your view outside.</p>
-          <a class="svc__cta" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20home%20window%20tint.">Free quote <span class="arr" aria-hidden="true">↗</span><span class="sr-only"> for home window glass</span></a>
-        </article>
-        <article class="svc">
-          <span class="svc__num">02</span>
-          <h3 class="svc__name">Commercial &amp; storefront glass</h3>
-          <p class="svc__desc">Glare control, privacy, and a cleaner, more finished look for offices, storefronts, and other business windows, scheduled around your hours, not ours.</p>
-          <a class="svc__cta" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20commercial%20window%20tint.">Free quote <span class="arr" aria-hidden="true">↗</span><span class="sr-only"> for commercial and storefront glass</span></a>
-        </article>
-        <article class="svc svc--img">
-          <span class="svc__num">03</span>
-          <h3 class="svc__name">Headlight &amp; taillight tinting</h3>
-          <p class="svc__desc">A cleaner, more finished look for your vehicle's lighting, applied carefully so brightness and visibility stay where they need to be. Ask us what makes sense for your lights and the road rules before you choose a shade.</p>
-          <a class="svc__cta" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20headlight%20or%20taillight%20tint.">Free quote <span class="arr" aria-hidden="true">↗</span><span class="sr-only"> for headlight and taillight tinting</span></a>
-          <img class="svc__img" src="assets/img/svc-lights.webp" alt="" loading="lazy" decoding="async" width="800" height="600">
-        </article>
-        <article class="svc">
-          <span class="svc__num">04</span>
-          <h3 class="svc__name">Tint removal</h3>
-          <p class="svc__desc">Old, bubbled, purple, or peeling tint removed cleanly with no adhesive residue left behind, ready for a fresh install or to go bare.</p>
-          <a class="svc__cta" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20tint%20removal.">Free quote <span class="arr" aria-hidden="true">↗</span><span class="sr-only"> for tint removal</span></a>
-        </article>
+    <!-- A · Window tint: one more tint service -->
+    <div class="removal">
+      <span class="removal__num">A.4</span>
+      <div class="removal__copy">
+        <h3 class="removal__name">Tint removal</h3>
+        <p>Old, bubbled, purple, or peeling tint removed cleanly with no adhesive residue left behind, ready for a fresh install or to go bare.</p>
+      </div>
+      <a class="svc__cta" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20tint%20removal.">Free quote <span class="arr" aria-hidden="true">↗</span><span class="sr-only"> for tint removal</span></a>
+    </div>
+
+    <!-- B · Wraps & appearance -->
+    <div class="family" id="appearance">
+      <div class="family__head">
+        <p class="family__tag"><span>B</span> Wraps &amp; appearance</p>
+        <h3 class="family__title">Change the look.<br>Keep it clean.</h3>
       </div>
 
-      <div class="lineup__group">
-        <p class="lineup__cat">Vinyl wraps</p>
-        <article class="svc svc--img">
-          <span class="svc__num">05</span>
-          <h3 class="svc__name">Vehicle wraps</h3>
-          <p class="svc__desc">Full or partial wraps for cars, trucks, and fleet vehicles, from full color changes to business branding and subtle accents.</p>
-          <a class="svc__cta" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20vehicle%20wrap.">Free quote <span class="arr" aria-hidden="true">↗</span><span class="sr-only"> for vehicle wraps</span></a>
-          <img class="svc__img" src="assets/img/svc-wrap.webp" alt="" loading="lazy" decoding="async" width="800" height="600">
+      <div class="looks">
+        <article class="look look--wrap">
+          <figure class="look__img"><img src="assets/img/svc-wrap.webp" alt="" loading="lazy" decoding="async" width="800" height="600"></figure>
+          <div class="look__body">
+            <span class="look__num">B.1</span>
+            <h4 class="look__name">Vehicle wraps</h4>
+            <p>Full or partial wraps for cars, trucks, and fleet vehicles, from full color changes to business branding and subtle accents.</p>
+            <a class="svc__cta" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20vehicle%20wrap.">Free quote <span class="arr" aria-hidden="true">↗</span><span class="sr-only"> for vehicle wraps</span></a>
+          </div>
         </article>
-        <article class="svc">
-          <span class="svc__num">06</span>
-          <h3 class="svc__name">Boats &amp; other vessels</h3>
-          <p class="svc__desc">Wraps beyond the road too, including boats, trailers, and powersports. If it's got a surface, we can talk through what's possible.</p>
-          <a class="svc__cta" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20boat%20or%20powersports%20wrap.">Free quote <span class="arr" aria-hidden="true">↗</span><span class="sr-only"> for boats and other vessels</span></a>
-        </article>
-      </div>
 
-      <div class="lineup__group">
-        <p class="lineup__cat">Detailing</p>
-        <article class="svc svc--img">
-          <span class="svc__num">07</span>
-          <h3 class="svc__name">Auto detailing</h3>
-          <p class="svc__desc">Interior and exterior detailing that gets your vehicle looking, and feeling, like new again, inside the cabin and out.</p>
-          <a class="svc__cta" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20auto%20detailing.">Free quote <span class="arr" aria-hidden="true">↗</span><span class="sr-only"> for auto detailing</span></a>
-          <img class="svc__img" src="assets/img/svc-detail.webp" alt="" loading="lazy" decoding="async" width="800" height="600">
+        <article class="look look--lights">
+          <figure class="look__img"><img src="assets/img/svc-lights.webp" alt="" loading="lazy" decoding="async" width="800" height="600"></figure>
+          <div class="look__body">
+            <span class="look__num">B.2</span>
+            <h4 class="look__name">Headlight &amp; taillight tinting</h4>
+            <p>A cleaner, more finished look for your lighting, applied carefully so brightness and visibility stay where they need to be. Lighting rules are strict, so ask us what's appropriate for your vehicle before choosing a shade.</p>
+            <a class="svc__cta" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20headlight%20or%20taillight%20tint.">Free quote <span class="arr" aria-hidden="true">↗</span><span class="sr-only"> for headlight and taillight tinting</span></a>
+          </div>
         </article>
-      </div>
 
-      <div class="lineup__mobile">
-        <p><strong>Mobile service:</strong> available for many jobs. Call to check your area.</p>
-        <a class="btn btn--ghost btn--sm" href="tel:+19893057875">Call to check <span class="arr" aria-hidden="true">↗</span></a>
+        <article class="look look--detail">
+          <figure class="look__img"><img src="assets/img/svc-detail.webp" alt="" loading="lazy" decoding="async" width="800" height="600"></figure>
+          <div class="look__body">
+            <span class="look__num">B.3</span>
+            <h4 class="look__name">Auto detailing</h4>
+            <p>Interior and exterior detailing that gets your vehicle looking, and feeling, like new again, inside the cabin and out.</p>
+            <a class="svc__cta" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20auto%20detailing.">Free quote <span class="arr" aria-hidden="true">↗</span><span class="sr-only"> for auto detailing</span></a>
+          </div>
+        </article>
+
+        <article class="look look--boats">
+          <div class="look__body">
+            <span class="look__num">B.4</span>
+            <p class="look__big" aria-hidden="true">On the water too.</p>
+            <div class="look__mid">
+              <h4 class="look__name">Boats, trailers &amp; powersports</h4>
+              <p>Wraps beyond the road, including boats, trailers, and powersports. If it's got a surface, we can talk through what's possible.</p>
+            </div>
+            <a class="svc__cta" href="sms:+19893057875?&amp;body=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20boat%20or%20powersports%20wrap.">Free quote <span class="arr" aria-hidden="true">↗</span><span class="sr-only"> for boats, trailers and powersports</span></a>
+          </div>
+        </article>
       </div>
     </div>
+
+    <!-- C · Home & commercial (full section further down) -->
+    <a class="family-c" href="#home">
+      <img class="family-c__img" src="assets/img/home-interior-wide.webp" alt="" loading="lazy" decoding="async" width="1600" height="1000">
+      <span class="family-c__body">
+        <span class="family__tag family__tag--light"><span>C</span> Home &amp; commercial glass</span>
+        <span class="family-c__title">Not just cars.</span>
+        <span class="family-c__text">Homes, offices, and storefronts: less glare, UV, and heat, with your view intact.</span>
+        <span class="family-c__link">See home &amp; commercial tint <span class="arr" aria-hidden="true">↓</span></span>
+      </span>
+    </a>
+
+    <div class="lineup__mobile">
+      <p><strong>Mobile service:</strong> available for many jobs. Call to check your area.</p>
+      <a class="btn btn--ghost btn--sm" href="tel:+19893057875">Call to check <span class="arr" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Full-bleed pause between sections -->
+<section class="band" aria-label="Made for the drive">
+  <img class="band__img" src="assets/img/band-rear.webp" alt="" loading="lazy" decoding="async" width="2400" height="1200">
+  <div class="band__text wrap">
+    <p class="band__line">Made for<br>the drive.</p>
   </div>
 </section>
 
@@ -410,24 +431,25 @@
       <li class="step">
         <span class="step__num">04</span>
         <span class="step__dot" aria-hidden="true"></span>
-        <h3>Drive away done</h3>
-        <p>We handle the install with care and a clean finish, and you're back on the road.</p>
+        <h3>Get the job done</h3>
+        <p>We handle the install with care and a clean finish, whether it's your car, your home, or your business.</p>
       </li>
     </ol>
   </div>
 </section>
 
 <!-- ================================================================
-     04 — SELECTED WORK
-     Real photos only. Add them to the GALLERY list in assets/js/site.js
-     (see the comment there); empty categories show a designed holding state.
+     04 — OUR WORK
+     Real job photos go in the GALLERY list at the top of assets/js/site.js.
+     Until a category has real photos, it shows clearly labelled studio
+     renders (Auto, Home) or a typographic panel (Boats & Powersports).
      ================================================================ -->
 <section class="section work" id="work" aria-labelledby="work-title">
   <div class="wrap">
     <div class="work__head">
       <div>
-        <p class="label"><span>04</span> Selected work</p>
-        <h2 class="display" id="work-title">Off the<br>shop floor.</h2>
+        <p class="label"><span>04</span> Our work</p>
+        <h2 class="display" id="work-title">Dark glass.<br>Clean lines.</h2>
       </div>
       <div class="work__filters" role="group" aria-label="Filter work by category">
         <button type="button" class="chip" data-filter="auto" aria-pressed="true">Auto</button>
@@ -436,20 +458,22 @@
       </div>
     </div>
 
+    <p class="work__note" id="workNote"></p>
     <div class="work__grid" id="workGrid" aria-live="polite"></div>
 
-    <div class="work__empty" id="workEmpty" hidden>
-      <div class="work__empty-art" aria-hidden="true">
-        <span class="frame frame--a"></span><span class="frame frame--b"></span><span class="frame frame--c"></span>
+    <div class="work__type" id="workType" hidden>
+      <p class="work__type-big" aria-hidden="true">Boats &amp;<br>Powersports</p>
+      <div class="work__type-copy">
+        <h3>Wraps for boats, trailers, and powersports.</h3>
+        <p>Every hull and trailer is different. Text us what you've got and we'll send photos of similar work and talk through what's possible.</p>
       </div>
-      <div class="work__empty-copy">
-        <p class="label label--small" id="workEmptyCat">Auto</p>
-        <h3>Fresh installs are on their way to this wall.</h3>
-        <p>We're photographing recent jobs now. Want to see a specific kind of install before you book? Text us and we'll send you real photos.</p>
-        <div class="work__empty-cta">
-          <a class="btn btn--signal" href="sms:+19893057875?&amp;body=Hi%2C%20could%20you%20send%20me%20some%20photos%20of%20your%20recent%20work%3F">Ask for photos <span class="arr" aria-hidden="true">↗</span></a>
-          <a class="btn btn--ghost" href="https://www.facebook.com/After5Tint" target="_blank" rel="noopener">See us on Facebook <span class="arr" aria-hidden="true">↗</span></a>
-        </div>
+    </div>
+
+    <div class="work__cta">
+      <p>Want to see real installs like yours before you book?</p>
+      <div class="work__cta-btns">
+        <a class="btn btn--signal" href="sms:+19893057875?&amp;body=Hi%2C%20could%20you%20send%20me%20some%20photos%20of%20your%20recent%20work%3F">Text us for photos <span class="arr" aria-hidden="true">↗</span></a>
+        <a class="btn btn--ghost" href="https://www.facebook.com/After5Tint" target="_blank" rel="noopener">After5Tint on Facebook <span class="arr" aria-hidden="true">↗</span></a>
       </div>
     </div>
   </div>
@@ -467,15 +491,13 @@
      ================================================================ -->
 <section class="section home" id="home" aria-labelledby="home-title">
   <div class="wrap home__grid">
-    <div class="home__art" aria-hidden="true">
-      <div class="pane-wall">
-        <span class="pane"></span><span class="pane pane--tint"></span>
-        <span class="pane pane--tint"></span><span class="pane"></span>
-        <span class="pane pane--tint"></span><span class="pane pane--tint"></span>
-      </div>
-      <span class="sunbeam"></span>
-      <p class="home__art-cap">Illustration</p>
-    </div>
+    <figure class="home__art">
+      <picture>
+        <source media="(max-width: 960px)" srcset="assets/img/home-interior-wide.webp">
+        <img src="assets/img/home-interior.webp" alt="Illustration of a sunlit living room with a glass wall overlooking the bay; the left panes are clear and the right panes are tinted darker" loading="lazy" decoding="async" width="1000" height="1250">
+      </picture>
+      <figcaption class="home__art-cap"><span>Clear</span><span>Tinted</span><em>Illustrative render</em></figcaption>
+    </figure>
     <div class="home__copy">
       <p class="label"><span>05</span> Home &amp; commercial</p>
       <h2 class="display" id="home-title">Keep the light.<br>Reduce the heat.</h2>

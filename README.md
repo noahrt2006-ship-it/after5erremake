@@ -8,7 +8,7 @@ Static site (plain HTML/CSS/JS, no build step). Deploys as-is on Vercel.
 - `assets/css/site.css` — design tokens (colors, type, spacing) at the top, then each section
 - `assets/js/site.js` — menu, film selector, tint comparison, gallery, FAQ, timeline, and the intro scroll controller
 - `assets/js/intro.js` + `assets/js/car-scene.js` — the 3D car intro (loads only on capable devices; everyone else gets the poster version)
-- `assets/img/` — renders of the 3D scene (posters, comparison pair, service images, contact backdrop, social image)
+- `assets/img/` — renders of the 3D scene (posters, comparison pair, service images, gallery, band, contact backdrop, social image) and the home-interior render
 - `assets/models/car/` — the 3D car model
 - `assets/fonts/` — Archivo + Inter (self-hosted, SIL Open Font License)
 - `vendor/three/` — three.js r169 (MIT)
@@ -16,7 +16,7 @@ Static site (plain HTML/CSS/JS, no build step). Deploys as-is on Vercel.
 ## Common edits
 
 - **Hours / phone / address:** search `index.html` for `8AM`, `989`, or `Bay St` (also in the JSON-LD block in `<head>`).
-- **Gallery photos:** put real job photos in `assets/img/work/` and list them in the `GALLERY` object at the top of `assets/js/site.js`. Categories with no photos show a "photos on the way" panel.
+- **Gallery photos:** put real job photos in `assets/img/work/` and list them in the `GALLERY` object at the top of `assets/js/site.js`. Until a category has real photos it shows studio renders labelled "Render" (Auto, Home) or a text panel (Boats & Powersports). Real photos replace the renders automatically.
 - **Colors:** `:root` tokens at the top of `site.css`. The lime accent is `--volt`.
 
 ## Launch checklist (moving to the business's own domain)
