@@ -1,0 +1,7 @@
+# Preview build of the After Five Tint redesign: kept out of search engines.
+# At launch on the business's own domain, replace with:
+#   User-agent: *
+#   Allow: /
+#   Sitemap: https://YOUR-DOMAIN/sitemap.xml
+User-agent: *
+Disallow: /
