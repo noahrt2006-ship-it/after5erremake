@@ -236,8 +236,8 @@ export async function createCarScene(canvas, opts = {}) {
     sl.lookAt(center.x, 3, center.z);
     scene.add(sl);
   }
-  // A single lime line on the floor: the brand accent, used once
-  const lime = new THREE.Mesh(new THREE.PlaneGeometry(0.03, 30), new THREE.MeshBasicMaterial({ color: 0xc8f169, fog: true }));
+  // A single red line on the floor: the brand accent, used once
+  const lime = new THREE.Mesh(new THREE.PlaneGeometry(0.03, 30), new THREE.MeshBasicMaterial({ color: 0xe5312b, fog: true }));
   lime.rotation.x = -Math.PI / 2;
   lime.rotation.z = Math.atan2(fwd.x, fwd.z);
   lime.position.copy(center).addScaledVector(side, -2.6);
